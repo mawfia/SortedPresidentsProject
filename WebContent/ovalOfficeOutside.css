@@ -1,0 +1,66 @@
+@CHARSET "UTF-8";
+
+
+h1{
+	position: absolute;
+    left: 0;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    color: red;
+}
+
+a{
+	
+	position: absolute;
+    left: 0;
+    top: 34%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+	
+}
+
+
+body{
+	
+	background-image: url("http://media1.s-nbcnews.com/j/newscms/2014_25/512041/20140616-whitehouse-exterior-sl-1454_5c57a317bef2495f30ebf48a314ac6f3.nbcnews-fp-1200-800.jpg");
+	background-position: center;
+	text-align: center;
+	
+}
+
+table{
+	
+	margin: 0 auto;
+	
+}
+
+td{
+	
+	text-align: center;
+	
+}
+
+img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 400;
+}
+
+fieldSet{
+	
+	width: 420;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+
+tfoot{
+	
+	text-align: center;
+	
+}

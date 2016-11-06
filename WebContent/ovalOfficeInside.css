@@ -1,0 +1,59 @@
+@CHARSET "UTF-8";
+
+
+h1{
+	display: block;
+	text-align: center;
+	margin: auto;
+	text-family: Helvetica;	
+}
+
+h2{
+	text-align: center;
+	height: auto;
+}
+
+body{
+	
+	background-image: url("http://www.euclidlibrary.org/images/tickle-your-brain/random-wallpapers-american-flag-wallpaper-34317.jpg?sfvrsn=0");
+	background-position: center;
+	text-align: center;
+	color: white;
+	
+}
+
+table{
+	
+	margin: 0 auto;
+	
+}
+
+td{
+	
+	text-align: center;
+	
+}
+
+img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 400;
+}
+
+fieldSet{
+	
+	width: 420;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: black;
+	background-opacity: .7;
+	
+}
+
+
+tfoot{
+	
+	text-align: center;
+	
+}
