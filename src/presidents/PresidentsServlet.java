@@ -73,10 +73,11 @@ public class PresidentsServlet extends HttpServlet {
 		String operation = request.getParameter("operation");
 		int currentTerm = (Integer)context.getAttribute("currentTerm");
 		//int termNumber = ((President[])context.getAttribute("presidents"))[currentTerm].getTermNumber();
-		String selectTerm = request.getParameter("selectTerm");
+		String selectTerm = request.getParameter("browsers");
 		String sort = request.getParameter("sort");
 		String input = request.getParameter("input");
 		String search = request.getParameter("search");
+		System.out.println(selectTerm);
 		
 		if(sort != null || input != null){
 			
@@ -97,7 +98,6 @@ public class PresidentsServlet extends HttpServlet {
 		} else if (operation.equals("Next")) {
 			setCurrentTerm(++currentTerm);
 		}
-		System.out.println(this.currentTerm);
 		context.setAttribute("currentTerm", this.currentTerm);
 		RequestDispatcher dispatcher = context.getRequestDispatcher("/presidents.jsp");
 		dispatcher.forward(request, response);
@@ -120,7 +120,7 @@ public class PresidentsServlet extends HttpServlet {
 		Object[] obj = (Object[])context.getAttribute("presidents");
 		
 		if(currentTerm < 0) this.currentTerm =  obj.length-1;
-		else if(currentTerm > obj.length) this.currentTerm = 0; 
+		else if(currentTerm > obj.length-1) this.currentTerm = 0; 
 		else this.currentTerm = currentTerm;
 	}
 
