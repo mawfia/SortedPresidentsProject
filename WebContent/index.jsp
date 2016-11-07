@@ -11,6 +11,6 @@
 </head>
 <body>
 <h1>Welcome to the Presidents Page</h1>
-	<a href="presidents.jsp">Click Here</a>
+	<a href="presidents.jsp"><img src="http://media1.s-nbcnews.com/j/newscms/2014_25/512041/20140616-whitehouse-exterior-sl-1454_5c57a317bef2495f30ebf48a314ac6f3.nbcnews-fp-1200-800.jpg" /></a>
 </body>
 </html>
