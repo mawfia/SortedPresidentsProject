@@ -13,9 +13,6 @@
 </head>
 <body>
 	<fieldset>
-		<h2>President
-			${applicationScope.presidents[applicationScope.currentTerm].firstName}
-			${applicationScope.presidents[applicationScope.currentTerm].lastName}</h2>
 		<c:choose>
 			<c:when test="${applicationScope.presidents == null}">
 				<table>
@@ -80,7 +77,6 @@
 			<tfoot>
 				<tr>
 					<th>Fun Fact:</th>
-					<th>${applicationScope.presidents[currentTerm].funFact}</th>
 					<th>${applicationScope.presidents[applicationScope.currentTerm].funFact}</th>
 				</tr>
 			</tfoot>
