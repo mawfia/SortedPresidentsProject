@@ -1,4 +1,4 @@
-package presidents;
+package presidents2;
 
 import java.io.BufferedReader;
 import java.io.IOException;

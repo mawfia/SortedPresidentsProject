@@ -1,4 +1,4 @@
-package presidents;
+package presidents2;
 
 public class President implements Comparable<President>{
 	private int number;
