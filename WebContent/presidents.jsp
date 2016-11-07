@@ -59,7 +59,7 @@
 		<form action="presidents.do" method="POST">
 			<input list="browsers" name="browsers" placeholder="Term Number" pattern="\d{1,2}" title="1-2 digits">
 			<datalist id="browsers" >
-				<c:forEach var="president" items="${sessionScope.president}">
+				<c:forEach var="president" items="${applicationScope.presidents}">
 					<option value="${president.termNumber}">${president.lastName}, ${president.firstName}</option>
 				</c:forEach>
 			</datalist>
