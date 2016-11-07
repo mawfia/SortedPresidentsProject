@@ -13,12 +13,9 @@
 </head>
 <body>
 	<fieldset>
-<<<<<<< HEAD
-=======
 		<h2>President
 			${applicationScope.presidents[applicationScope.currentTerm].firstName}
 			${applicationScope.presidents[applicationScope.currentTerm].lastName}</h2>
->>>>>>> 2504a772398dc7b09ac6d7bcee39a4f00a9faf24
 		<c:choose>
 			<c:when test="${applicationScope.presidents == null}">
 				<table>
@@ -54,13 +51,6 @@
 		</table>
 			</c:when>
 			<c:otherwise>
-<<<<<<< HEAD
-=======
-				<img src="${applicationScope.presidents[applicationScope.currentTerm].photo}" />
-			</c:otherwise>
-		</c:choose>
-
->>>>>>> 2504a772398dc7b09ac6d7bcee39a4f00a9faf24
 		<table>
 		<h2>President
 			${applicationScope.presidents[applicationScope.currentTerm].firstName}
@@ -73,22 +63,7 @@
 			</thead>
 			<tr>
 				<td>Term Number:</td>
-<<<<<<< HEAD
 				<td>${applicationScope.presidents[currentTerm].termNumber}</td>
-			</tr>
-			<tr>
-				<td>Party:</td>
-				<td>${applicationScope.presidents[currentTerm].party}</td>
-			</tr>
-			<tr>
-				<td>Start Year:</td>
-				<td>${applicationScope.presidents[currentTerm].startDate}</td>
-			</tr>
-			<tr>
-				<td>End Year:</td>
-				<td>${applicationScope.presidents[currentTerm].endDate}</td>
-=======
-				<td>${applicationScope.presidents[applicationScope.currentTerm].termNumber}</td>
 			</tr>
 			<tr>
 				<td>Party:</td>
@@ -101,16 +76,12 @@
 			<tr>
 				<td>End Year:</td>
 				<td>${applicationScope.presidents[applicationScope.currentTerm].endDate}</td>
->>>>>>> 2504a772398dc7b09ac6d7bcee39a4f00a9faf24
 			</tr>
 			<tfoot>
 				<tr>
 					<th>Fun Fact:</th>
-<<<<<<< HEAD
 					<th>${applicationScope.presidents[currentTerm].funFact}</th>
-=======
 					<th>${applicationScope.presidents[applicationScope.currentTerm].funFact}</th>
->>>>>>> 2504a772398dc7b09ac6d7bcee39a4f00a9faf24
 				</tr>
 			</tfoot>
 		</table>
