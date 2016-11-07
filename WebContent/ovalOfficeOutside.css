@@ -25,8 +25,15 @@ a{
 
 body{
 	
+<<<<<<< HEAD
 	background-position: center;
 	text-align: center
+=======
+	background-image: url("https://i.ytimg.com/vi/qqvc0zVTZ_k/maxresdefault.jpg");
+	background-size:cover;
+	background-repeat:no-repeat;
+	text-align: center;
+>>>>>>> c54ca47bd95873f0c36403cedc39c693e72a48ec
 	
 }
 

@@ -13,19 +13,17 @@
 </head>
 <body>
 	<fieldset>
+<<<<<<< HEAD
+=======
 		<h2>President
 			${applicationScope.presidents[applicationScope.currentTerm].firstName}
 			${applicationScope.presidents[applicationScope.currentTerm].lastName}</h2>
+>>>>>>> 2504a772398dc7b09ac6d7bcee39a4f00a9faf24
 		<c:choose>
 			<c:when test="${applicationScope.presidents == null}">
-				<img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Seal_of_the_President_of_the_United_States.svg" />
-			</c:when>
-			<c:otherwise>
-				<img src="${applicationScope.presidents[applicationScope.currentTerm].photo}" />
-			</c:otherwise>
-		</c:choose>
-
-		<table>
+				<table>
+		<h2>President George Washington</h2>
+				<img src=" https://www.whitehouse.gov/sites/default/files/imagecache/gallery_img_full/image/image_file/washington.jpg" />
 			<thead>
 				<tr>
 					<th colspan="2">Biography</th>
@@ -33,6 +31,63 @@
 			</thead>
 			<tr>
 				<td>Term Number:</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>Party:</td>
+				<td>Independent</td>
+			</tr>
+			<tr>
+				<td>Start Year:</td>
+				<td>1789</td>
+			</tr>
+			<tr>
+				<td>End Year:</td>
+				<td>1797</td>
+			</tr>
+			<tfoot>
+				<tr>
+					<th>Fun Fact:</th>
+					<th>In 1967, to ensure that he would never be outranked, George Washington was awarded the highest military rank that will ever be bestowed: General of the Armies of the United States.</th>
+				</tr>
+			</tfoot>
+		</table>
+			</c:when>
+			<c:otherwise>
+<<<<<<< HEAD
+=======
+				<img src="${applicationScope.presidents[applicationScope.currentTerm].photo}" />
+			</c:otherwise>
+		</c:choose>
+
+>>>>>>> 2504a772398dc7b09ac6d7bcee39a4f00a9faf24
+		<table>
+		<h2>President
+			${applicationScope.presidents[applicationScope.currentTerm].firstName}
+			${applicationScope.presidents[applicationScope.currentTerm].lastName}</h2>
+				<img src="${applicationScope.presidents[currentTerm].photo}" />
+			<thead>
+				<tr>
+					<th colspan="2">Biography</th>
+				<tr>
+			</thead>
+			<tr>
+				<td>Term Number:</td>
+<<<<<<< HEAD
+				<td>${applicationScope.presidents[currentTerm].termNumber}</td>
+			</tr>
+			<tr>
+				<td>Party:</td>
+				<td>${applicationScope.presidents[currentTerm].party}</td>
+			</tr>
+			<tr>
+				<td>Start Year:</td>
+				<td>${applicationScope.presidents[currentTerm].startDate}</td>
+			</tr>
+			<tr>
+				<td>End Year:</td>
+				<td>${applicationScope.presidents[currentTerm].endDate}</td>
+=======
 				<td>${applicationScope.presidents[applicationScope.currentTerm].termNumber}</td>
 			</tr>
 			<tr>
@@ -46,14 +101,22 @@
 			<tr>
 				<td>End Year:</td>
 				<td>${applicationScope.presidents[applicationScope.currentTerm].endDate}</td>
+>>>>>>> 2504a772398dc7b09ac6d7bcee39a4f00a9faf24
 			</tr>
 			<tfoot>
 				<tr>
 					<th>Fun Fact:</th>
+<<<<<<< HEAD
+					<th>${applicationScope.presidents[currentTerm].funFact}</th>
+=======
 					<th>${applicationScope.presidents[applicationScope.currentTerm].funFact}</th>
+>>>>>>> 2504a772398dc7b09ac6d7bcee39a4f00a9faf24
 				</tr>
 			</tfoot>
 		</table>
+			</c:otherwise>
+		</c:choose>
+
 
 		<br />
 		<form action="presidents.do" method="POST">
