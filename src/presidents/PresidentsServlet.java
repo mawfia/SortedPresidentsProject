@@ -52,8 +52,6 @@ public class PresidentsServlet extends HttpServlet {
 					ServletContext context = this.getServletContext();
 					context.setAttribute("presidents", presi);
 					context.setAttribute("currentTerm", this.currentTerm);
-					//context.setAttribute("listLength", presi.length);
-					//context.setAttribute("termNumber", presi[0].getTermNumber());
 					
 				}
 			}
@@ -72,23 +70,20 @@ public class PresidentsServlet extends HttpServlet {
 
 		String operation = request.getParameter("operation");
 		int currentTerm = (Integer)context.getAttribute("currentTerm");
-		//int termNumber = ((President[])context.getAttribute("presidents"))[currentTerm].getTermNumber();
 		String selectTerm = request.getParameter("browsers");
 		String sort = request.getParameter("sort");
 		String input = request.getParameter("input");
 		String search = request.getParameter("search");
-		System.out.println(selectTerm);
+		//System.out.println(input + " " + search);
 		
 		if(sort != null || input != null){
 			
 			if(sort != null) new FilterPresidents(Integer.parseInt(sort), null, context);
-			else if(search != null) new FilterPresidents(Integer.parseInt(input), search.toLowerCase(), context);
+			else if(search != null) new FilterPresidents(Integer.parseInt(input), search.toUpperCase(), context);
 			this.currentTerm = 0;
 		}
-		//else context.setAttribute("presidents", presi);
 		
 		if (operation == null) {
-			//if(termNumber == ) setCurrentTerm(0);
 			if(selectTerm != null) setCurrentTerm(Integer.parseInt(selectTerm)-1);
 		} else if (operation.equals("Previous")) {
 			setCurrentTerm(--currentTerm);

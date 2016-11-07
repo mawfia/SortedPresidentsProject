@@ -19,13 +19,13 @@ public class FilterPresidents {
 		switch (selection) {
 		case 0: 
 			Collections.sort(presidentsList);
-			//printPresidents(presidentsList);
 			context.setAttribute("presidents", presidentsList.toArray());
+			//printPresidents(presidentsList);
 			break;
 		case 1:
 			Collections.sort(presidentsList, (p1, p2) -> -(p1.getLastName().compareToIgnoreCase(p2.getLastName())));
 			context.setAttribute("presidents", presidentsList.toArray());
-			//printPresidents(presidentsList);			
+			//printPresidents(presidentsList);	// For debugging purposes	
 			break;
 		case 2:
 			filteredList = filterPresidents(presidentsList, (p) -> p.getEndDate()-p.getStartDate() <= 4);
@@ -38,12 +38,12 @@ public class FilterPresidents {
 			//printPresidents(filteredList);			
 			break;
 		case 4:
-			filteredList = filterPresidents(presidentsList, (p) -> p.getFirstName().toUpperCase().contains(search));
+			filteredList = filterPresidents(presidentsList, (p) -> p.getFirstName().toUpperCase().startsWith(search));
 			context.setAttribute("presidents", filteredList.toArray());
 			//printPresidents(filteredList);									
 			break;
 		case 5:
-			filteredList = filterPresidents(presidentsList, (p) -> p.getLastName().toUpperCase().contains(search));
+			filteredList = filterPresidents(presidentsList, (p) -> p.getLastName().toUpperCase().startsWith(search));
 			context.setAttribute("presidents", filteredList.toArray());
 			//printPresidents(filteredList);												
 			break;
