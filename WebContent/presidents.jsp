@@ -13,19 +13,11 @@
 </head>
 <body>
 	<fieldset>
-		<h2>President
-			${sessionScope.presidents[sessionScope.currentTerm].firstName}
-			${sessionScope.presidents[sessionScope.currentTerm].lastName}</h2>
 		<c:choose>
 			<c:when test="${applicationScope.presidents == null}">
-				<img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Seal_of_the_President_of_the_United_States.svg" />
-			</c:when>
-			<c:otherwise>
-				<img src="${applicationScope.presidents[currentTerm].photo}" />
-			</c:otherwise>
-		</c:choose>
-
-		<table>
+				<table>
+		<h2>President George Washington</h2>
+				<img src=" https://www.whitehouse.gov/sites/default/files/imagecache/gallery_img_full/image/image_file/washington.jpg" />
 			<thead>
 				<tr>
 					<th colspan="2">Biography</th>
@@ -33,27 +25,65 @@
 			</thead>
 			<tr>
 				<td>Term Number:</td>
-				<td>${sessionScope.presidents[currentTerm].termNumber}</td>
+				<td>1</td>
 			</tr>
 			<tr>
 				<td>Party:</td>
-				<td>${sessionScope.presidents[currentTerm].party}</td>
+				<td>Independent</td>
 			</tr>
 			<tr>
 				<td>Start Year:</td>
-				<td>${sessionScope.presidents[currentTerm].startDate}</td>
+				<td>1789</td>
 			</tr>
 			<tr>
 				<td>End Year:</td>
-				<td>${sessionScope.presidents[currentTerm].endDate}</td>
+				<td>1797</td>
 			</tr>
 			<tfoot>
 				<tr>
 					<th>Fun Fact:</th>
-					<th>${sessionScope.presidents[currentTerm].funFact}</th>
+					<th>In 1967, to ensure that he would never be outranked, George Washington was awarded the highest military rank that will ever be bestowed: General of the Armies of the United States.</th>
 				</tr>
 			</tfoot>
 		</table>
+			</c:when>
+			<c:otherwise>
+		<table>
+		<h2>President
+			${applicationScope.presidents[applicationScope.currentTerm].firstName}
+			${applicationScope.presidents[applicationScope.currentTerm].lastName}</h2>
+				<img src="${applicationScope.presidents[currentTerm].photo}" />
+			<thead>
+				<tr>
+					<th colspan="2">Biography</th>
+				<tr>
+			</thead>
+			<tr>
+				<td>Term Number:</td>
+				<td>${applicationScope.presidents[currentTerm].termNumber}</td>
+			</tr>
+			<tr>
+				<td>Party:</td>
+				<td>${applicationScope.presidents[currentTerm].party}</td>
+			</tr>
+			<tr>
+				<td>Start Year:</td>
+				<td>${applicationScope.presidents[currentTerm].startDate}</td>
+			</tr>
+			<tr>
+				<td>End Year:</td>
+				<td>${applicationScope.presidents[currentTerm].endDate}</td>
+			</tr>
+			<tfoot>
+				<tr>
+					<th>Fun Fact:</th>
+					<th>${applicationScope.presidents[currentTerm].funFact}</th>
+				</tr>
+			</tfoot>
+		</table>
+			</c:otherwise>
+		</c:choose>
+
 
 		<br />
 		<form action="presidents.do" method="POST">
