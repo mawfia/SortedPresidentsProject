@@ -14,14 +14,14 @@
 <body>
 	<fieldset>
 		<h2>President
-			${sessionScope.presidents[sessionScope.currentTerm].firstName}
-			${sessionScope.presidents[sessionScope.currentTerm].lastName}</h2>
+			${applicationScope.presidents[applicationScope.currentTerm].firstName}
+			${applicationScope.presidents[applicationScope.currentTerm].lastName}</h2>
 		<c:choose>
 			<c:when test="${applicationScope.presidents == null}">
 				<img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Seal_of_the_President_of_the_United_States.svg" />
 			</c:when>
 			<c:otherwise>
-				<img src="${applicationScope.presidents[currentTerm].photo}" />
+				<img src="${applicationScope.presidents[applicationScope.currentTerm].photo}" />
 			</c:otherwise>
 		</c:choose>
 
@@ -33,24 +33,24 @@
 			</thead>
 			<tr>
 				<td>Term Number:</td>
-				<td>${sessionScope.presidents[currentTerm].termNumber}</td>
+				<td>${applicationScope.presidents[applicationScope.currentTerm].termNumber}</td>
 			</tr>
 			<tr>
 				<td>Party:</td>
-				<td>${sessionScope.presidents[currentTerm].party}</td>
+				<td>${applicationScope.presidents[applicationScope.currentTerm].party}</td>
 			</tr>
 			<tr>
 				<td>Start Year:</td>
-				<td>${sessionScope.presidents[currentTerm].startDate}</td>
+				<td>${applicationScope.presidents[applicationScope.currentTerm].startDate}</td>
 			</tr>
 			<tr>
 				<td>End Year:</td>
-				<td>${sessionScope.presidents[currentTerm].endDate}</td>
+				<td>${applicationScope.presidents[applicationScope.currentTerm].endDate}</td>
 			</tr>
 			<tfoot>
 				<tr>
 					<th>Fun Fact:</th>
-					<th>${sessionScope.presidents[currentTerm].funFact}</th>
+					<th>${applicationScope.presidents[applicationScope.currentTerm].funFact}</th>
 				</tr>
 			</tfoot>
 		</table>
@@ -59,7 +59,7 @@
 		<form action="presidents.do" method="POST">
 			<input list="browsers" name="browsers" placeholder="Term Number" pattern="\d{1,2}" title="1-2 digits">
 			<datalist id="browsers" >
-				<c:forEach var="president" items="${sessionScope.presidents}">
+				<c:forEach var="president" items="${sessionScope.president}">
 					<option value="${president.termNumber}">${president.lastName}, ${president.firstName}</option>
 				</c:forEach>
 			</datalist>

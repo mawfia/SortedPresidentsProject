@@ -74,7 +74,7 @@ public class PresidentsServlet extends HttpServlet {
 		String sort = request.getParameter("sort");
 		String input = request.getParameter("input");
 		String search = request.getParameter("search");
-		//System.out.println(input + " " + search);
+		System.out.println(input + " " + search + " " + sort + " " + currentTerm + " " + selectTerm);
 		
 		if(sort != null || input != null){
 			
