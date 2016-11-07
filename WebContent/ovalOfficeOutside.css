@@ -25,8 +25,9 @@ a{
 
 body{
 	
-	background-image: url("http://media1.s-nbcnews.com/j/newscms/2014_25/512041/20140616-whitehouse-exterior-sl-1454_5c57a317bef2495f30ebf48a314ac6f3.nbcnews-fp-1200-800.jpg");
-	background-position: center;
+	background-image: url("https://i.ytimg.com/vi/qqvc0zVTZ_k/maxresdefault.jpg");
+	background-size:cover;
+	background-repeat:no-repeat;
 	text-align: center;
 	
 }
