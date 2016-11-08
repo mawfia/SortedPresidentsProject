@@ -1,8 +1,10 @@
 # PresidentsProject
-1st Group Project in Quad 2
+1st Group Project in Quad 2 created 4 November 2016
+
 GENERAL USAGE NOTES
 -------------------
 This was a weekend project designed, built, and deployed to cloud services from scratch.
+
 -The purpose of this dynamic web application is to display a web page with information about all Presidents that have held office.
 
 -A user is able to click next and previous buttons to scroll through the presidents in order of term in office.
@@ -19,13 +21,17 @@ This was a weekend project designed, built, and deployed to cloud services from 
 
 Technology
 -----------------
--All back-end logic and data storage was executed using Java.
--Search and sort features were done using Java8 Lambda Expressions.
--Maven was used to manage the libries for XML dependencies.
+1.  All back-end logic and data storage was executed using Java.
 
--Front-end operations were executed using HTML5 and CSS.
--Tomcat is used as the server for executing the JSP and JSPTL handling client requets.
--The application is deployed on a AWS account for cloud services.
+2.  Search and sort features were done using Java8 Lambda Expressions.
+
+3.  Maven was used to manage the libries for XML dependencies.
+
+4.  Front-end operations were executed using HTML5 and CSS.
+
+5. Tomcat is used as the server for executing the JSP and JSPTL handling client requets.
+
+6. The application is deployed on a AWS account for cloud services.
 
 Current maintainers:
  * Michael Williams (SD7)
