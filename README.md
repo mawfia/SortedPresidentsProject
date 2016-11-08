@@ -4,11 +4,17 @@ GENERAL USAGE NOTES
 -------------------
 This was a weekend project designed, built, and deployed to cloud services from scratch.
 -The purpose of this dynamic web application is to display a web page with information about all Presidents that have held office.
+
 -A user is able to click next and previous buttons to scroll through the presidents in order of term in office.
+
 -The user is also able to jump to a particular president by entering in their term number.
+
 -Each page displays the Presidents' name, image, term number, political party, dates in office, and a fun fact.
+
 -The list of Presidents can also be sorted alphabetical/reverse alphabetical order and by term.
+
 -The user can also search the list by typing in letters for the firstname, lastname, political party, and fun facts.
+
 -Finally, the user can return to the original list of Presidents by clicking the home button.
 
 Technology
